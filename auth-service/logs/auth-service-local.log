@@ -1,0 +1,932 @@
+2025-12-22T10:35:19.826+05:30  INFO 10824 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Starting AuthServiceApplication using Java 17.0.12 with PID 10824 (C:\Users\KIIT\Downloads\chubb_workspace\flightapp-docker\auth-service\target\classes started by KIIT in C:\Users\KIIT\Downloads\chubb_workspace\flightapp-docker\auth-service)
+2025-12-22T10:35:19.827+05:30 DEBUG 10824 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-22T10:35:19.829+05:30  INFO 10824 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : The following 1 profile is active: "local"
+2025-12-22T10:35:20.477+05:30  INFO 10824 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-12-22T10:35:20.588+05:30  INFO 10824 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 R2DBC repository interfaces.
+2025-12-22T10:35:20.780+05:30  INFO 10824 --- [auth-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3466a254-70d1-3e68-80f1-e2b5b2b9045a
+2025-12-22T10:35:20.888+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-22T10:35:20.890+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.892+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.898+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.900+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.900+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$555/0x000001f50140b008] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.901+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.905+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.909+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.909+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.910+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.911+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.914+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.918+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.919+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.919+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.920+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.921+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.922+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-22T10:35:20.923+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:20.923+05:30  WARN 10824 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T10:35:21.413+05:30  INFO 10824 --- [auth-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c2b664c7-c70a-4b07-bd41-1ca3985c1a46
+
+2025-12-22T10:35:22.034+05:30  INFO 10824 --- [auth-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-22T10:35:22.381+05:30  INFO 10824 --- [auth-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-22T10:35:22.402+05:30  WARN 10824 --- [auth-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-22T10:35:22.436+05:30  INFO 10824 --- [auth-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-22T10:35:22.491+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-22T10:35:22.496+05:30  INFO 10824 --- [auth-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-22T10:35:22.515+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-22T10:35:22.517+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-22T10:35:22.850+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-12-22T10:35:22.853+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-12-22T10:35:22.856+05:30  INFO 10824 --- [auth-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-22T10:35:22.859+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1766379922858 with initial instances count: 1
+2025-12-22T10:35:22.861+05:30  INFO 10824 --- [auth-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2025-12-22T10:35:22.862+05:30  INFO 10824 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1766379922862, current=UP, previous=STARTING]
+2025-12-22T10:35:22.864+05:30  INFO 10824 --- [auth-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:d833a9cdba888cd78a72d51332cfec9e: registering service...
+2025-12-22T10:35:22.918+05:30  INFO 10824 --- [auth-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:d833a9cdba888cd78a72d51332cfec9e - registration status: 204
+2025-12-22T10:35:22.980+05:30  INFO 10824 --- [auth-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8084
+2025-12-22T10:35:22.981+05:30  INFO 10824 --- [auth-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2025-12-22T10:35:23.243+05:30  INFO 10824 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Started AuthServiceApplication in 4.899 seconds (process running for 5.204)
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : PASSWORD EXPIRY CONFIGURATION
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Demo Mode: true
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Demo Seconds: 300
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Production Days: 90
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Current Expiry Duration: 300 seconds
+2025-12-22T10:35:23.247+05:30  INFO 10824 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T10:40:22.520+05:30  INFO 10824 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T10:45:22.529+05:30  INFO 10824 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T10:50:22.546+05:30  INFO 10824 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T10:55:22.566+05:30  INFO 10824 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:00:22.583+05:30  INFO 10824 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:02:41.524+05:30  INFO 14916 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Starting AuthServiceApplication using Java 17.0.12 with PID 14916 (C:\Users\KIIT\Downloads\chubb_workspace\flightapp-docker\auth-service\target\classes started by KIIT in C:\Users\KIIT\Downloads\chubb_workspace\flightapp-docker\auth-service)
+2025-12-22T11:02:41.526+05:30 DEBUG 14916 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-22T11:02:41.527+05:30  INFO 14916 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : The following 1 profile is active: "local"
+2025-12-22T11:02:42.185+05:30  INFO 14916 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-12-22T11:02:42.320+05:30  INFO 14916 --- [auth-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 2 R2DBC repository interfaces.
+2025-12-22T11:02:42.501+05:30  INFO 14916 --- [auth-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3466a254-70d1-3e68-80f1-e2b5b2b9045a
+2025-12-22T11:02:42.606+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-22T11:02:42.610+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.611+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.616+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.617+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.618+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$555/0x000002595840c068] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.619+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.624+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.628+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.629+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.630+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.631+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.633+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.640+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.641+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.642+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.642+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.644+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.645+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-22T11:02:42.645+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:42.646+05:30  WARN 14916 --- [auth-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-22T11:02:43.106+05:30  INFO 14916 --- [auth-service] [main] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: db675d1d-c249-49bd-9011-9c27f99008cd
+
+2025-12-22T11:02:43.711+05:30  INFO 14916 --- [auth-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-22T11:02:44.063+05:30  INFO 14916 --- [auth-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-12-22T11:02:44.085+05:30  WARN 14916 --- [auth-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-22T11:02:44.119+05:30  INFO 14916 --- [auth-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-22T11:02:44.172+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-22T11:02:44.176+05:30  INFO 14916 --- [auth-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:02:44.192+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-12-22T11:02:44.193+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-22T11:02:44.940+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-12-22T11:02:44.942+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-12-22T11:02:44.944+05:30  INFO 14916 --- [auth-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-12-22T11:02:44.948+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1766381564948 with initial instances count: 0
+2025-12-22T11:02:44.950+05:30  INFO 14916 --- [auth-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2025-12-22T11:02:44.951+05:30  INFO 14916 --- [auth-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1766381564951, current=UP, previous=STARTING]
+2025-12-22T11:02:44.952+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:11803873a2285148af85264b41112537: registering service...
+2025-12-22T11:02:45.100+05:30  INFO 14916 --- [auth-service] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8084
+2025-12-22T11:02:45.102+05:30  INFO 14916 --- [auth-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2025-12-22T11:02:45.213+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:11803873a2285148af85264b41112537 - registration status: 204
+2025-12-22T11:02:45.394+05:30  INFO 14916 --- [auth-service] [main] c.flightapp.auth.AuthServiceApplication  : Started AuthServiceApplication in 5.433 seconds (process running for 5.744)
+2025-12-22T11:02:45.398+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T11:02:45.399+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : PASSWORD EXPIRY CONFIGURATION
+2025-12-22T11:02:45.399+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T11:02:45.399+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Demo Mode: true
+2025-12-22T11:02:45.399+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Demo Seconds: 300
+2025-12-22T11:02:45.400+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Production Days: 90
+2025-12-22T11:02:45.400+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : Current Expiry Duration: 300 seconds
+2025-12-22T11:02:45.400+05:30  INFO 14916 --- [auth-service] [main] c.f.a.config.PasswordExpiryConfigLogger  : ========================================
+2025-12-22T11:03:14.948+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-12-22T11:03:14.949+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-12-22T11:03:14.949+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-12-22T11:03:14.949+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-12-22T11:03:14.951+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-12-22T11:03:14.951+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-12-22T11:03:14.952+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-12-22T11:03:14.991+05:30  INFO 14916 --- [auth-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-12-22T11:07:44.215+05:30  INFO 14916 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:12:44.224+05:30  INFO 14916 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:17:44.243+05:30  INFO 14916 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:22:44.261+05:30  INFO 14916 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-12-22T11:22:45.037+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: admin
+2025-12-22T11:22:45.040+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: admin
+2025-12-22T11:22:46.674+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-2] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:46.794+05:30 DEBUG 14916 --- [auth-service] [reactor-tcp-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:22:46.968+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.051+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-4] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.133+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-5] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.231+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-6] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.310+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-7] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.357+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: admin
+2025-12-22T11:22:47.409+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-8] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.493+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-1] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.562+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-2] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:22:47.621+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] io.asyncer.r2dbc.mysql.MySqlConnection   : The server timezone is unknown <India Standard Time>, trying to use system default timezone
+
+java.time.DateTimeException: Invalid ID for region-based ZoneId, invalid format: India Standard Time
+	at java.base/java.time.ZoneRegion.checkName(ZoneRegion.java:152) ~[na:na]
+	at java.base/java.time.ZoneRegion.ofId(ZoneRegion.java:117) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:410) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:358) ~[na:na]
+	at java.base/java.time.ZoneId.of(ZoneId.java:314) ~[na:na]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.convertZoneId(MySqlConnection.java:513) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlConnection.lambda$fullInit$15(MySqlConnection.java:470) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.MySqlResult.lambda$map$1(MySqlResult.java:87) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:200) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:250) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.0.jar:3.6.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:383) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:121) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.0.jar:3.6.0]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:426) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.13.jar:1.1.13]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.handleDecoded(MessageDuplexCodec.java:162) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.asyncer.r2dbc.mysql.client.MessageDuplexCodec.channelRead(MessageDuplexCodec.java:73) ~[r2dbc-mysql-1.0.5.jar:1.0.5]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:333) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:454) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.101.Final.jar:4.1.101.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-12-22T11:23:04.613+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: admin
+2025-12-22T11:23:04.617+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: admin
+2025-12-22T11:23:04.628+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:23:04.916+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: admin
+2025-12-22T11:23:38.397+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: riddhima19
+2025-12-22T11:23:38.399+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: riddhima19
+2025-12-22T11:23:38.409+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:23:38.419+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: riddhima19
+2025-12-22T11:24:00.266+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: riddhima19
+2025-12-22T11:24:00.274+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: riddhima19
+2025-12-22T11:24:00.279+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:24:00.291+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: riddhima19
+2025-12-22T11:24:50.334+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/register - Registration request for username: fufu6
+2025-12-22T11:24:50.340+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Registration attempt for username: fufu6
+2025-12-22T11:24:50.349+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id FROM users WHERE users.username = ? LIMIT 1]
+2025-12-22T11:24:50.374+05:30 DEBUG 14916 --- [auth-service] [reactor-tcp-nio-3] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id FROM users WHERE users.email = ? LIMIT 1]
+2025-12-22T11:24:50.732+05:30 DEBUG 14916 --- [auth-service] [reactor-tcp-nio-3] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [INSERT INTO users (username, password, email, first_name, last_name, role, enabled, created_at, updated_at, last_password_changed, password_expiry_days, force_password_change) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+2025-12-22T11:24:51.090+05:30  INFO 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Registration successful for user: fufu6
+2025-12-22T11:24:59.548+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-3] c.f.auth.controller.AuthController       : POST /api/auth/validate - Token validation request
+2025-12-22T11:25:00.385+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-3] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:25:12.980+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: riddhima19
+2025-12-22T11:25:12.981+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: riddhima19
+2025-12-22T11:25:12.990+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:25:12.996+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: riddhima19
+2025-12-22T11:25:30.867+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: fufu6
+2025-12-22T11:25:30.872+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: fufu6
+2025-12-22T11:25:30.877+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:25:31.151+05:30  INFO 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login successful for user: fufu6
+2025-12-22T11:25:31.215+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-3] c.f.auth.controller.AuthController       : POST /api/auth/validate - Token validation request
+2025-12-22T11:25:31.228+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-3] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:25:52.349+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.controller.AuthController       : POST /api/auth/login - Login request for username: testadmin
+2025-12-22T11:25:52.350+05:30  INFO 14916 --- [auth-service] [reactor-http-nio-2] c.f.auth.service.impl.AuthServiceImpl    : Login attempt for username: testadmin
+2025-12-22T11:25:52.360+05:30 DEBUG 14916 --- [auth-service] [reactor-http-nio-2] o.s.r2dbc.core.DefaultDatabaseClient     : Executing SQL statement [SELECT users.id, users.username, users.password, users.email, users.first_name, users.last_name, users.role, users.enabled, users.created_at, users.updated_at, users.last_password_changed, users.password_expiry_days, users.force_password_change FROM users WHERE users.username = ?]
+2025-12-22T11:25:52.365+05:30  WARN 14916 --- [auth-service] [reactor-tcp-nio-3] c.f.auth.service.impl.AuthServiceImpl    : Login failed for username: testadmin
+2025-12-22T11:27:44.275+05:30  INFO 14916 --- [auth-service] [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
