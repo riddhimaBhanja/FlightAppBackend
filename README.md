@@ -107,7 +107,7 @@ flightapp-docker/
 ## OVERVIEW
 
 The system consists of the following services:
-
+```text
 Flight Service – Manages airlines, flight schedules, inventory, and search.
 Booking Service – Handles ticket bookings, cancellations, passenger info, PNR generation, and booking history.
 API Gateway – The single entry point to route all client requests.
@@ -117,7 +117,7 @@ Load Balencing - Utilized Open feign and spring load balencer to provide load ba
 Circuit Breaker - Implemented circuit breaker to fallback if service is down.
 RabbitMQ – Used to publish an event whenever a booking is completed( Ongoing )
 Each service has its own MySQL database and is designed to run independently.
-
+```
 ## Running the Application
 
 ### Start all components
