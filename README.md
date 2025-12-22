@@ -104,6 +104,19 @@ flightapp-docker/
 * Optional: Postman/Newman, JMeter
 
 ---
+## OVERVIEW
+
+The system consists of the following services:
+
+Flight Service – Manages airlines, flight schedules, inventory, and search.
+Booking Service – Handles ticket bookings, cancellations, passenger info, PNR generation, and booking history.
+API Gateway – The single entry point to route all client requests.
+Eureka Server – Service registry used for discovering microservices dynamically.
+Config Server – Centralized configuration storage for all microservices.
+Load Balencing - Utilized Open feign and spring load balencer to provide load balencing in Flight-booking service.
+Circuit Breaker - Implemented circuit breaker to fallback if service is down.
+RabbitMQ – Used to publish an event whenever a booking is completed( Ongoing )
+Each service has its own MySQL database and is designed to run independently.
 
 ## Running the Application
 
@@ -126,6 +139,96 @@ docker-compose up --build
 ## ER Diagram
 
 ![ER Diagram(auth service)](https://github.com/user-attachments/assets/8667ff0f-3f2a-4cbf-923f-8249a6b4a737)
+
+
+## Microservice Responsibilities
+
+### 1. Flight Service
+
+* Add airline
+* Add flight inventory
+* Search flights by date, source, and destination
+* Provide flight details to booking service
+* Maintains available and total seats
+
+### 2. Booking Service
+
+* Create a booking for a selected flight
+* Validate flight using OpenFeign call
+* Store passenger details
+* Maintain booking history and ticket retrieval
+* Publish a booking-created event to RabbitMQ
+* Handle cancellation (only allowed 24 hours before the journey)
+
+### 3. Eureka Server
+
+* Registers and discovers all running microservices
+* Removes the need to hard-code URLs
+
+### 4. Config Server
+
+* Hosts application configuration (e.g., in Git)
+* All services fetch config from here
+
+### 5. API Gateway
+
+* Routes `/api/v1.0/flight/**` to Flight Service
+* Routes `/api/v1.0/flight/booking/**` to Booking Service
+* Helps in centralized routing and potential future cross-cutting concerns
+
+### 6. RabbitMQ
+
+* Booking service publishes a JSON message whenever a booking is successful
+* Future services (email, SMS, analytics) can consume these messages
+
+---
+
+## How to Run the System (In Order)
+
+### 1. Start Config Server
+
+```
+cd config-server
+mvn spring-boot:run
+```
+
+### 2. Start Eureka Server
+
+```
+cd eureka-server
+mvn spring-boot:run
+```
+
+### 3. Start RabbitMQ (Docker)
+
+```
+docker run -d --hostname rabbit --name rabbitmq \
+  -p 5672:5672 -p 15672:15672 \
+  rabbitmq:3-management
+```
+
+### 4. Start Flight Service
+
+```
+cd flight-service
+mvn spring-boot:run
+```
+
+### 5. Start Booking Service
+
+```
+cd booking-service
+mvn spring-boot:run
+```
+
+### 6. Start API Gateway
+
+```
+cd api-gateway
+mvn spring-boot:run
+```
+
+---
 
 ## Authentication
 
