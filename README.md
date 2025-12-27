@@ -2,7 +2,7 @@
 
 
 A containerized microservices-based flight booking system built with Spring Boot WebFlux.
-Includes secure API access, service discovery, resilient inter-service communication, and event-driven booking notifications
+Includes secure API access, service discovery, resilient inter-service communication, and event-driven booking notifications.
 
 ---
 
